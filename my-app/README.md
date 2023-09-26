@@ -4,7 +4,7 @@ This repository contains the code for Lab 1 of the CSE 2102 course. Follow the s
 
 ### Step 1: Clone the Repository
 Open your command prompt or terminal and execute the following command to clone the repository:
-```git clone https://github.com/Jainil-Desai/JD_CSE_2102.git```
+```git clone https://github.com/moa20016/CSE-2102.git```
 
 ### Step 2: Access Lab 1 Code
 Navigate to the repository folder using your command prompt or terminal. Within the downloaded folder, you will find two directories, ```Lab0``` and ```Lab1```. Enter the ```Lab 1``` directory, and inside it, navigate to the ```my-app``` directory. 
