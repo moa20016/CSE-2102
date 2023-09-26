@@ -14,7 +14,7 @@ After changing directory to ```my-app```, type ```code .``` inside of the comman
 If this doesn't work, manually open ```my-app``` folder in VSCode.
 
 ### Step 4: Install Extensions 
-Install the necessary packages that are recommened by VSCode, if any. If you don't see a beaker shaped logo on the side, search ```Test Explorer UI``` and install it. After installing it, you will see a beaker logo on the left panel.
+Install the necessary packages that are recommened by VSCode, if any. 
 
 ### Step 5: Test the Code
 Open up the ```AppTest.java``` and ```TestMeTests.java```. Click on the beaker logo on the left panel and click the play logo to run the unittest.
