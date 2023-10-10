@@ -1,0 +1,4 @@
+In this modified code, I've initialized an i variable in the handler to keep track of the number of times the server has been accessed.
+I also created a last_access variable to store the timestamp of the last access.
+In the do_GET method, I increment the i counter and update the last_access timestamp with the current date and time.
+I include the number of times the server has been accessed and the last access timestamp in the response message.
