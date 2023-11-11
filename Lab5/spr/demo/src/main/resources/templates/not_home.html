@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Questions</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        div {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #555;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input {
+            margin-bottom: 16px;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function showAlert() {
+            alert("Quiz submitted!");
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Questions Page</h1>
+
+    <div th:each="question, questionIter : ${questions}">
+        <h2 th:text="${'Question ' + (questionIter.index + 1)}"></h2>
+        <p th:text="${question.question}"></p>
+
+        <label th:for="${'q' + questionIter.index + '_option_true'}">
+            <input th:id="${'q' + questionIter.index + '_option_true'}"
+                   type="radio"
+                   th:name="${'question' + questionIter.index}"
+                   value="true"> True
+        </label><br>
+        <label th:for="${'q' + questionIter.index + '_option_false'}">
+            <input th:id="${'q' + questionIter.index + '_option_false'}"
+                   type="radio"
+                   th:name="${'question' + questionIter.index}"
+                   value="false"> False
+        </label><br>
+    </div>
+
+    <form action="/proxy/8092/test" onclick="showAlert()">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
